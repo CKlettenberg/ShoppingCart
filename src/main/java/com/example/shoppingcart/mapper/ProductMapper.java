@@ -5,7 +5,7 @@ import com.example.shoppingcart.model.Product;
 
 public class ProductMapper {
 
-    // Convert Product entity to ProductDTO
+    
     public static ProductDTO toDTO(Product product) {
         if (product == null) {
             return null;
@@ -20,7 +20,7 @@ public class ProductMapper {
         );
     }
 
-    // Convert ProductDTO to Product entity
+    
     public static Product toEntity(ProductDTO productDTO) {
         if (productDTO == null) {
             return null;
@@ -31,7 +31,7 @@ public class ProductMapper {
         product.setName(productDTO.getName());
         product.setPrice(productDTO.getPrice());
         product.setQuantity(productDTO.getQuantity());
-        // The total is not explicitly set, as it's derived from price and quantity
+        
 
         return product;
     }
